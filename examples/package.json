@@ -9,7 +9,8 @@
   "dependencies": {
     "ogl": "^0.0.76",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "suspend-react": "^0.0.8"
   },
   "scripts": {
     "dev": "vite",
