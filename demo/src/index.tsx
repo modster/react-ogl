@@ -4,19 +4,17 @@ import * as React from 'react'
 import { render } from 'react-dom'
 // @ts-ignore
 import { MeshProps, useFrame, Canvas } from 'react-ogl/web'
-
 const hotpink = new OGL.Color(0xfba2d4)
 const orange = new OGL.Color(0xf5ce54)
 
+
 const Box = (props: MeshProps) => {
+
   const mesh = React.useRef<OGL.Mesh>()
   const [hovered, setHover] = React.useState(false)
   const [active, setActive] = React.useState(false)
-
   const programRef = React.useRef<OGL.Program>()
-
   let point = [0, 0]
-
   useFrame(() => {
     mesh.current.rotation.x += 0.01
     ;(programRef.current.uniforms as Record<string, { value: any }>).uPoint.value = point
